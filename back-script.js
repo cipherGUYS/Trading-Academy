@@ -34,7 +34,7 @@ function add() {
       pass: PASS,
     },
   }).then(() => {
-    window.location.href='/home-index.html';
+    window.location.href='/Dashboard.html';
   });
 }
 document.getElementById("submit").addEventListener("click", () => {
