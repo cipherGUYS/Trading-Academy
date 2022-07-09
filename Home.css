@@ -222,4 +222,17 @@
   .u-section-2 .u-sheet-1 {
     min-height: 210px;
   }
+} .u-section-3 {
+  background-image: url("images/Frame59.png");
+  background-position: 50% 50%;
+}
+
+.u-section-3 .u-sheet-1 {
+  min-height: 1395px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-3 .u-sheet-1 {
+    min-height: 500px;
+  }
 }
