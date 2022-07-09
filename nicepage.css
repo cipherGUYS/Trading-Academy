@@ -38579,11 +38579,12 @@ a.u-link.u-text-hover-grey-90:hover {
   text-transform: uppercase;
   font-size: 0.875rem;
   letter-spacing: 1px;
-  margin: 6px -178px 0 auto;
+  margin: 6px -177px 0 auto;
+  padding: 6px 30px 6px 29px;
 }
 
 .u-header .u-menu-1 {
-  margin: -41px -11px 0 auto;
+  margin: -33px -11px 0 auto;
 }
 
 .u-header .u-nav-1 {
