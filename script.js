@@ -16,10 +16,10 @@ function convert(text, chk) {
     speech.pitch = 2;
     voices = window.speechSynthesis.getVoices();
     if (chk == 0) {
-        speech.voice = voices[8]
+        speech.voice = voices[0]
     }
     else {
-        speech.voice = voices[0]
+        speech.voice = voices[8]
     }
     console.log(voices)
     window.speechSynthesis.speak(speech);
