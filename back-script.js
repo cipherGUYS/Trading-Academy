@@ -6,6 +6,7 @@ import {
   set,
   child,
   update,
+  push,
   remove,
 } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-database.js";
 const firebaseConfig = {
@@ -28,9 +29,10 @@ function add() {
   var NAME = formData["Email"].value;
   var PASS = formData["Password"].value;
 
-  update(ref(db, "Student/"), {
-    NAME: {
-      name: NAME,
+  
+  update(ref(db, "/"), {
+    "hello": {
+      email: NAME,
       pass: PASS,
     },
   }).then(() => {
