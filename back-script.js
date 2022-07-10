@@ -25,6 +25,7 @@ function stringify(name){
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getDatabase();
+const newCache = await caches.open('new-cache');
 function register() {
   
   const formData = document.forms["Regform"];
@@ -38,10 +39,19 @@ function register() {
     Money:1000,
     Email: "not provided",
     Phone: "not provided",
-    Dob: "not provided"
+    Dob: "not provided",
+    Lvl:"0"
    }
   ).then(() => {
-    window.location.replace('Profile.html');
+    get(child(ref(db), `${NAME}/`)).then((data) => {
+    console.log(data.val());
+  //   newCache.put('/user.json', new Response(`${data.val()}`))
+  //   console.log("hi");
+  //   const reQuest = '/user.json';
+  //   const response = newCache.match(reQuest);
+  //   console.log(response);
+  window.location.replace('./Profile.html');
+   });
   });
 }
 if(document.getElementById("submit")){
@@ -49,7 +59,26 @@ if(document.getElementById("submit")){
     register();
   });
 }
+function profile(){
+  console.log("hi");
+  get(child(ref(db), `admin/`)).then((data) => {
+    console.log(data.val(),"hello");
+    document.getElementById('urName').innerText= `Name : ${data.val().Name}`;
+    document.getElementById('urEmail').innerText= `Email : ${data.val().Email}`;
+    document.getElementById('urDob').innerText= `DOB : ${data.val().Dob}`;
+    document.getElementById('urLvl').innerText= `Level : ${data.val().Lvl}`;
+    document.getElementById('urBal').innerText= `Balance : ${data.val().Money}`;
+   });
 
+}
+function waiting(){
+  if(document.getElementById('urBal')){
+    profile()
+  }
+  else{
+    setTimeout(()=>{waiting();},1000);
+  }
+}
 function dataADD(){
   const  formData = document.forms["DetailForm"];
   var uname = formData.uname.value;
@@ -57,7 +86,7 @@ function dataADD(){
   var email= formData.email.value;
   var phone= formData.phone.value;
   var dob = formData.date.value;
-  update(ref(db, `/${uname}`), { 
+  update(ref(db, `/admin`), { 
     Name: Nama,
     Email: email,
     Phone: phone,
@@ -65,8 +94,16 @@ function dataADD(){
    }
   ).then(() => {
     document.getElementById('msg').innerText="Data updated succesfully";
+    get(child(ref(db), `admin/`)).then((data) => {
+      console.log(data.val());
+      document.getElementById('urName').innerText= `Name : ${data.val().Name}`;
+      document.getElementById('urEmail').innerText= `Email : ${data.val().Email}`;
+      document.getElementById('urDob').innerText= `DOB : ${data.val().Dob}`;
+      document.getElementById('urLvl').innerText= `Level : ${data.val().Lvl}`;
+      document.getElementById('urBal').innerText= `Balance : ${data.val().Money}`;
+     });
     setTimeout(()=>{document.getElementById('msg').innerText="";},2000)
-    
+
   });
 }
 if(document.getElementById("profile_update")){
@@ -74,4 +111,4 @@ if(document.getElementById("profile_update")){
     dataADD();
   });
 }
-
+waiting();
