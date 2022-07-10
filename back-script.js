@@ -19,30 +19,30 @@ const firebaseConfig = {
   appId: "1:593448539333:web:fd68e4d6c17f208bcc0cac",
   measurementId: "G-2QZGFD4552",
 };
-
+function stringify(name){
+  return name;
+}
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getDatabase();
-function add() {
+function register() {
   
   const formData = document.forms["Regform"];
   var NAME = formData["Email"].value;
   var PASS = formData["Password"].value;
-
-  
-  update(ref(db, "/"), {
-    "hello": {
-      email: NAME,
-      pass: PASS,
-    },
-  }).then(() => {
+  // var JSONData = `[{ sds: {email: ${NAME},pass: ${PASS}}}]`;
+  // JSONData=JSONData.replace('sds',`${NAME}`);
+  update(ref(db, `/${NAME}`), { 
+    Name:NAME,
+    Pass:PASS
+   }
+  ).then(() => {
     window.location.replace('Dashboard.html');
   });
 }
 document.getElementById("submit").addEventListener("click", () => {
-  add();
+  register();
 });
 
-function funda() {
-  console.log("Akash Funda");
-}
+// function dataADD{
+// }
