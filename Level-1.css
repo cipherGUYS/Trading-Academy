@@ -1,124 +1,128 @@
  .u-section-1 {
-  background-image: url("images/Frame591.png");
-  background-position: 50% 50%;
-}
+   background-image: url("images/Frame591.png");
+   background-position: 50% 50%;
+ }
 
-.u-section-1 .u-sheet-1 {
-  min-height: 1316px;
-}
+ .u-section-1 .u-sheet-1 {
+   min-height: 1316px;
+ }
 
-.u-section-1 .u-text-1 {
-  font-weight: 700;
-  margin: 46px 463px 0 auto;
-}
+ .u-section-1 .u-text-1 {
+   font-weight: 700;
+   margin: 46px 463px 0 auto;
+ }
 
-.u-section-1 .u-text-2 {
-  font-weight: 700;
-  margin: 277px 415px 0 auto;
-}
+ .u-section-1 .u-text-2 {
+   font-weight: 700;
+   margin: 277px 415px 0 auto;
+ }
 
-.u-section-1 .u-text-3 {
-  font-weight: 700;
-  margin: 263px 536px 0 340px;
-}
+ .u-section-1 .u-text-3 {
+   font-weight: 700;
+   margin: 263px 536px 0 340px;
+ }
 
-.u-section-1 .u-text-4 {
-  font-weight: 700;
-  margin: 261px 463px 60px 413px;
-}
+ .u-section-1 .u-text-4 {
+   font-weight: 700;
+   margin: 261px 463px 60px 413px;
+ }
 
-@media (max-width: 1199px) {
-  .u-section-1 .u-sheet-1 {
-    min-height: 1085px;
-  }
+ @media (max-width: 1199px) {
+   .u-section-1 .u-sheet-1 {
+     min-height: 1085px;
+   }
 
-  .u-section-1 .u-text-1 {
-    margin-right: 382px;
-  }
+   .u-section-1 .u-text-1 {
+     margin-right: 382px;
+   }
 
-  .u-section-1 .u-text-2 {
-    margin-right: 342px;
-  }
+   .u-section-1 .u-text-2 {
+     margin-right: 342px;
+   }
 
-  .u-section-1 .u-text-3 {
-    margin-right: 436px;
-    margin-left: 240px;
-  }
+   .u-section-1 .u-text-3 {
+     margin-right: 436px;
+     margin-left: 240px;
+   }
 
-  .u-section-1 .u-text-4 {
-    margin-right: 363px;
-    margin-left: 313px;
-  }
-}
+   .u-section-1 .u-text-4 {
+     margin-right: 363px;
+     margin-left: 313px;
+   }
+ }
 
-@media (max-width: 991px) {
-  .u-section-1 .u-sheet-1 {
-    min-height: 831px;
-  }
+ @media (max-width: 991px) {
+   .u-section-1 .u-sheet-1 {
+     min-height: 831px;
+   }
 
-  .u-section-1 .u-text-1 {
-    margin-right: 293px;
-  }
+   .u-section-1 .u-text-1 {
+     margin-right: 293px;
+   }
 
-  .u-section-1 .u-text-2 {
-    margin-right: 262px;
-  }
+   .u-section-1 .u-text-2 {
+     margin-right: 262px;
+   }
 
-  .u-section-1 .u-text-3 {
-    margin-right: 326px;
-    margin-left: 130px;
-  }
+   .u-section-1 .u-text-3 {
+     margin-right: 326px;
+     margin-left: 130px;
+   }
 
-  .u-section-1 .u-text-4 {
-    margin-right: 253px;
-    margin-left: 203px;
-  }
-}
+   .u-section-1 .u-text-4 {
+     margin-right: 253px;
+     margin-left: 203px;
+   }
+ }
 
-@media (max-width: 767px) {
-  .u-section-1 .u-sheet-1 {
-    min-height: 623px;
-  }
+ @media (max-width: 767px) {
+   .u-section-1 .u-sheet-1 {
+     min-height: 623px;
+   }
 
-  .u-section-1 .u-text-1 {
-    margin-right: 220px;
-  }
+   .u-section-1 .u-text-1 {
+     margin-right: 220px;
+   }
 
-  .u-section-1 .u-text-2 {
-    margin-right: 197px;
-  }
+   .u-section-1 .u-text-2 {
+     margin-right: 197px;
+   }
 
-  .u-section-1 .u-text-3 {
-    margin-right: 236px;
-    margin-left: 40px;
-  }
+   .u-section-1 .u-text-3 {
+     margin-right: 236px;
+     margin-left: 40px;
+   }
 
-  .u-section-1 .u-text-4 {
-    margin-right: 163px;
-    margin-left: 113px;
-  }
-}
+   .u-section-1 .u-text-4 {
+     margin-right: 163px;
+     margin-left: 113px;
+   }
+ }
 
-@media (max-width: 575px) {
-  .u-section-1 .u-sheet-1 {
-    min-height: 392px;
-  }
+ @media (max-width: 575px) {
+   .u-section-1 .u-sheet-1 {
+     min-height: 392px;
+   }
 
-  .u-section-1 .u-text-1 {
-    margin-right: 139px;
-  }
+   .u-section-1 .u-text-1 {
+     margin-right: 139px;
+   }
 
-  .u-section-1 .u-text-2 {
-    margin-right: 124px;
-  }
+   .u-section-1 .u-text-2 {
+     margin-right: 124px;
+   }
 
-  .u-section-1 .u-text-3 {
-    margin-right: 76px;
-    margin-left: 0;
-  }
+   .u-section-1 .u-text-3 {
+     margin-right: 76px;
+     margin-left: 0;
+   }
 
-  .u-section-1 .u-text-4 {
-    margin-right: 63px;
-    margin-left: 13px;
-  }
-}
+   .u-section-1 .u-text-4 {
+     margin-right: 63px;
+     margin-left: 13px;
+   }
+ }
+
+ .learning-intro {
+   background-image: url("images/learning_path.png") !important;
+ }
