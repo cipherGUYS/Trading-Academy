@@ -50,7 +50,7 @@ function register() {
   //   const reQuest = '/user.json';
   //   const response = newCache.match(reQuest);
   //   console.log(response);
-  window.location.replace('./profile.html');
+  window.location.replace('./Profile.html');
    });
   });
 }
