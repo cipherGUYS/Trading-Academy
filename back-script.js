@@ -35,25 +35,30 @@ function register() {
   update(ref(db, `/${NAME}`), { 
     Name:NAME,
     Pass:PASS,
-    Money:1000
+    Money:1000,
+    Email: "not provided",
+    Phone: "not provided",
+    Dob: "not provided"
    }
   ).then(() => {
-    window.location.replace('Dashboard.html');
+    window.location.replace('Profile.html');
   });
 }
-document.getElementById("submit").addEventListener("click", () => {
-  register();
-});
+if(document.getElementById("submit")){
+  document.getElementById("submit").addEventListener("click", () => {
+    register();
+  });
+}
 
 function dataADD(){
   const  formData = document.forms["DetailForm"];
   var uname = formData.uname.value;
-  var namam = formData.name.value;
+  var Nama = formData.Name.value;
   var email= formData.email.value;
   var phone= formData.phone.value;
   var dob = formData.date.value;
   update(ref(db, `/${uname}`), { 
-    Name: namam,
+    Name: Nama,
     Email: email,
     Phone: phone,
     Dob: dob
@@ -61,5 +66,12 @@ function dataADD(){
   ).then(() => {
     document.getElementById('msg').innerText="Data updated succesfully";
     setTimeout(()=>{document.getElementById('msg').innerText="";},2000)
+    
   });
 }
+if(document.getElementById("profile_update")){
+  document.getElementById("profile_update").addEventListener("click", () => {
+    dataADD();
+  });
+}
+
