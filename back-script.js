@@ -34,7 +34,8 @@ function register() {
   // JSONData=JSONData.replace('sds',`${NAME}`);
   update(ref(db, `/${NAME}`), { 
     Name:NAME,
-    Pass:PASS
+    Pass:PASS,
+    Money:1000
    }
   ).then(() => {
     window.location.replace('Dashboard.html');
@@ -44,5 +45,21 @@ document.getElementById("submit").addEventListener("click", () => {
   register();
 });
 
-// function dataADD{
-// }
+function dataADD(){
+  const  formData = document.forms["DetailForm"];
+  var uname = formData.uname.value;
+  var namam = formData.name.value;
+  var email= formData.email.value;
+  var phone= formData.phone.value;
+  var dob = formData.date.value;
+  update(ref(db, `/${uname}`), { 
+    Name: namam,
+    Email: email,
+    Phone: phone,
+    Dob: dob
+   }
+  ).then(() => {
+    document.getElementById('msg').innerText="Data updated succesfully";
+    setTimeout(()=>{document.getElementById('msg').innerText="";},2000)
+  });
+}
