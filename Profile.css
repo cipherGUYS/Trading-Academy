@@ -51,6 +51,11 @@
   margin: 44px auto 0;
 }
 
+.u-section-1 .u-text-5 {
+  font-family: Poppins;
+  margin: 20px auto 0;
+}
+
 @media (max-width: 1199px) {
   .u-section-1 .u-sheet-1 {
     min-height: 450px;
